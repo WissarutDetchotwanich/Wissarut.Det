@@ -1,33 +1,79 @@
-<style>
-    body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
-    padding: 40px 20px; /* เพิ่มช่องว่างด้านบนและล่างแทน */
-    margin: 0;
-}
-   .card {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    max-width: 400px;
-    text-align: center;
-    margin: 0 auto; /* จัดให้อยู่ตรงกลางซ้าย-ขวา */
-}
-    button {
-        background-color: #7b2cbf;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 15px;
-    }
-    .hidden-text {
-        display: none;
-        margin-top: 15px;
-        color: #666;
-        font-style: italic;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำตัว - DevPool 5</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            padding: 50px 20px; /* ใช้ padding แทนการล็อกความสูงหน้าจอ */
+            margin: 0;
+        }
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 0 auto; /* จัดกล่องให้อยู่ตรงกลางหน้าจอ */
+            text-align: center;
+        }
+        button {
+            background-color: #7b2cbf;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .hidden-text {
+            display: none;
+            margin-top: 20px;
+            color: #555;
+            line-height: 1.6;
+            text-align: left;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #7b2cbf;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>ณัฏฐณิชช์ ชัยโพธิ์</h1>
+        <p style="font-size: 18px; color: #555;">
+            <strong>สังกัด:</strong> แผนกก่อสร้างปฏิบัติการและบำรุงรักษา <br>
+            การไฟฟ้าส่วนภูมิภาค สาขาอำเภอประทาย (กฟอ.ประทาย)
+        </p>
+        
+        <button id="toggle-btn">คลิกดูเหตุผลที่อยากเข้า DevPool</button>
+        
+        <p id="reason-text" class="hidden-text">
+            อยากพัฒนาทักษะด้าน Digital Development เพื่อนำไปต่อยอดและเปลี่ยนไอเดียระบบงานในองค์กร เช่น โครงการนวัตกรรมตรวจจับการละเมิดใช้ไฟฟ้า (BTC-Hunter) ให้กลายเป็นระบบที่ใช้งานได้จริง มีประสิทธิภาพ และช่วยขับเคลื่อน กฟภ. ไปสู่ยุคพลังงานดิจิทัลครับ
+        </p>
+    </div>
+
+    <script>
+        const btn = document.getElementById('toggle-btn');
+        const text = document.getElementById('reason-text');
+
+        btn.addEventListener('click', function() {
+            if (text.style.display === 'block') {
+                text.style.display = 'none';
+                btn.textContent = 'คลิกดูเหตุผลที่อยากเข้า DevPool';
+            } else {
+                text.style.display = 'block';
+                btn.textContent = 'ซ่อนข้อความ';
+            }
+        });
+    </script>
+
+</body>
+</html>
